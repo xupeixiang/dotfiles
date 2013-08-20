@@ -7,3 +7,4 @@ cp ~/.vimrc ~/dotfiles/
 git st
 git ca -m "update automately by push.sh"
 git push
+
