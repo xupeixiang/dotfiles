@@ -1,6 +1,6 @@
 [user]
     name = Peixiang xu
-	email = peixiangxu@gmail.com
+    email = peixiangxu@gmail.com
 [alias]
     cm = commit
     ca = commit -a
