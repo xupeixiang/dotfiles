@@ -8,6 +8,6 @@ cp ~/.vimrc $dotfiles_path
 
 cd $dotfiles_path
 git st
-git ca -m "update automately by push.sh"
+git ca
 git push
 
