@@ -3,7 +3,7 @@
 dotfiles_path=~/projects/dotfiles
 
 cp ~/.gitconfig $dotfiles_path
-cp ~/.bash_profile $dotfiles_path
+cp ~/.bashrc $dotfiles_path
 cp ~/.vimrc $dotfiles_path
 
 cd $dotfiles_path
