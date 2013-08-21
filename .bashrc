@@ -10,6 +10,7 @@ export PS1="\[\e[32;1m\]\u@\H \[\e[36;1m\]\w \[\e[33;1m\]\t \$ \[\e[0m\]"
 # alias
 alias ll='ls -l -a'
 alias grep='grep --color=always'
+alias j='jump'
 
 # customed cd
 export MARKPATH=$HOME/.marks
@@ -25,10 +26,20 @@ function unmark {
 function marks {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- && echo
 }
-_completemarks() {
-    local curw=${COMP_WORDS[COMP_CWORD]}
-    local wordlist=$(find $MARKPATH -type l | awk -F"/" '{printf "%s", $NF}')
-    COMPREPLY=($(compgen -W '${wordlist[@]}' -- "$curw"))
-    return 0
+
+# Set auto bash completion for command jump or umark
+function _completemarks
+{
+        local cword=${COMP_WORDS[COMP_CWORD]}
+        local mark_list=$(marks | awk -F '->' '{print $1}' | sed 's/*$//g')
+
+        # Only do complete on first argument
+        if [ $COMP_CWORD -eq 1 ]; then
+            COMPREPLY=($(compgen -W "${mark_list[@]}" -- "$cword"))
+        else
+            COMPREPLY=()
+        fi
+            return 0
 }
-complete -F _completemarks jump unmark
+
+complete -o nospace -F _completemarks jump unmark j
