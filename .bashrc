@@ -1,8 +1,11 @@
-# for color
+# ls color for mac
 export CLICOLOR=1
-
-# list export
 export LSCOLORS=GxFxCxDxCxegedabagaced
+
+# ls color for ubuntu
+if [ $OSTYPE = 'linux-gnu' ];then
+    alias ls='ls --color=auto'
+fi
 
 # \h:\W \u\$
 export PS1="\[\e[32;1m\]\u@\H \[\e[36;1m\]\w \[\e[33;1m\]\t \$ \[\e[0m\]"
@@ -24,7 +27,7 @@ function unmark {
     rm -i "$MARKPATH/$1"
 }
 function marks {
-    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- && echo
+    dir -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- && echo
 }
 
 # Set auto bash completion for command jump or umark
