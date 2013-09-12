@@ -11,6 +11,10 @@ export PS1="\[\e[32;1m\]\u@\H \[\e[36;1m\]\w \[\e[33;1m\]\t \$ \[\e[0m\]"
 alias ll='ls -l -a'
 alias grep='grep --color=always'
 alias j='jump'
+alias ss='svn st'
+alias ssq='svn st -q'
+alias sl='svn log'
+alias sll='svn log -l 5'
 
 # customed cd
 export MARKPATH=$HOME/.marks
