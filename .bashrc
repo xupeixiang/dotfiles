@@ -31,7 +31,11 @@ function unmark {
     rm -i "$MARKPATH/$1"
 }
 function marks {
-    dir -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- && echo
+    if [ $OSTYPE = 'linux-gnu' ];then
+        dir -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- && echo
+    else
+        ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- && echo
+    fi
 }
 
 # Set auto bash completion for command jump or umark
