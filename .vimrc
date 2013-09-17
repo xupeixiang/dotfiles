@@ -35,7 +35,6 @@ filetype indent on
 " Set to auto read when a file is changed from the outside
 set autoread
 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -58,6 +57,11 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+" Make backspace work like sane editors
+set bs=2
+
+" Show command when you type them
+set sc
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -98,10 +102,6 @@ set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 
-" Linebreak on 78 characters
-set lbr
-set tw=78
-
 set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
@@ -124,7 +124,7 @@ let python_highlight_all=1
 " => Vim stuffs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "ctags
-let Tlist_Ctags_Cmd="/usr/local/bin/ctags"
+let Tlist_Ctags_Cmd="/usr/bin/ctags"
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Left_Window=1
