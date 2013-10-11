@@ -67,8 +67,13 @@ set sc
 
 " Enable syntax highlighting
 syntax enable
-
 colorscheme pablo
+hi LineNr ctermfg=darkgrey
+
+" current line
+set cursorline
+hi CursorLine cterm=none
+hi CursorLineNr ctermfg=white guifg=white
 " Set utf8 as standard encoding and en_US as the standard language
 set encoding=utf8
 
