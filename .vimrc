@@ -67,7 +67,7 @@ set sc
 
 " Enable syntax highlighting
 syntax enable
-colorscheme pablo
+colorscheme grb256
 hi LineNr ctermfg=darkgrey
 
 " current line
@@ -121,6 +121,7 @@ let g:pydoc_open_cmd="vsplit"
 let g:pydoc_highlight=0
 
 "python syntax plugin
+let python_version_2=1
 let python_highlight_all=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
