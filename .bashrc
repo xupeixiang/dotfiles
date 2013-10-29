@@ -8,7 +8,8 @@ if [ $OSTYPE = 'linux-gnu' ];then
 fi
 
 # \h:\W \u\$
-export PS1="\[\e[32;1m\]\u · \[\e[36;1m\]\w · \[\e[33;1m\]\t \$ \[\e[0m\]"
+export PS1="\[\e[32;1m\]\u \[\e[0;30;1m\]· \[\e[36;1m\]\w \[\e[0;30;1m\]· \[\e[33;1m\]\t \d \[\e[0;30;1m\]· \n\
+\$ \[\e[0m\] "
 
 # alias
 alias ll='ls -l -a'
