@@ -1,11 +1,11 @@
 # ls color for mac
-export CLICOLOR=1
-export LSCOLORS=GxFxCxDxCxegedabagaced
+#export CLICOLOR=1
+#export LSCOLORS=GxFxCxDxCxegedabagaced
 
-# ls color for ubuntu
-if [ $OSTYPE = 'linux-gnu' ];then
-    alias ls='ls --color=auto'
-fi
+# ls color for ubuntu both
+#if [ $OSTYPE = 'linux-gnu' ];then
+alias ls='ls --color=auto'
+#fi
 
 # \h:\W \u\$
 export PS1="\[\e[32;1m\]\u@\h \[\e[0;30;1m\]· \[\e[36;1m\]\w \[\e[0;30;1m\]· \[\e[33;1m\]\t \d \[\e[0;30;1m\]· \n\
