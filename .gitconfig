@@ -5,7 +5,7 @@
     cm = commit
     ca = commit -a
     st = status -uno
-    rm = rm --cached
+    rmc = rm --cached
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 [push]
 	default = simple
