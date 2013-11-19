@@ -1,6 +1,6 @@
 " line no
 set nu
-
+    
 " paste
 set pastetoggle=<F9>
 
@@ -19,6 +19,9 @@ vnoremap <silent> # :<C-U>
 " folding
 set fdm=indent
 set foldlevelstart=99          " default not open
+
+" completion
+inoremap<S-tab> <C-p>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
