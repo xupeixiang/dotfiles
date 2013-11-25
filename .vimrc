@@ -23,6 +23,12 @@ set foldlevelstart=99          " default not open
 " completion
 inoremap<S-tab> <C-p>
 
+" open last location
+if has("autocmd")
+      au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+          \| exe "normal! g'\"" | endif
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
