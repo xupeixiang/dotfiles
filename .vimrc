@@ -130,10 +130,7 @@ set laststatus=2
 execute pathogen#infect()
 
 le g:jetdi#auto_initialization=1
-let g:jedi#show_call_signatures=1
-let g:jedi#completions_enabled=1
 let g:jedi#completions_command="<S-tab>"
-let g:jedi#complete_string=1
 
 "python syntax plugin
 let python_version_2=1
