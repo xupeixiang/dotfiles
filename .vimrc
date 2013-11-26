@@ -127,13 +127,11 @@ set laststatus=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python stuffs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"python complete
-let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
-
-"pydoc
-let g:pydoc_cmd="/usr/bin/pydoc"
-let g:pydoc_open_cmd="vsplit"
-let g:pydoc_highlight=0
+let g:jedi#auto_initialization=1
+let g:jedi#show_call_signatures=1
+let g:jedi#completions_enabled=1
+let g:jedi#completions_command="<S-tab>"
+let g:jedi#complete_string=1
 
 "python syntax plugin
 let python_version_2=1
