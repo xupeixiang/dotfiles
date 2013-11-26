@@ -127,7 +127,9 @@ set laststatus=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python stuffs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:jedi#auto_initialization=1
+execute pathogen#infect()
+
+le g:jetdi#auto_initialization=1
 let g:jedi#show_call_signatures=1
 let g:jedi#completions_enabled=1
 let g:jedi#completions_command="<S-tab>"
