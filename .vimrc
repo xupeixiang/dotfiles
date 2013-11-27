@@ -146,9 +146,6 @@ let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Left_Window=1
 let Tlist_WinWidth=45
 
-"nerdtree
-let g:nerdtree_tabs_open_on_console_startup=1 
-
 map <F12> :call Do_CsTag()<CR>
 nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
 nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
