@@ -1,33 +1,39 @@
-" line no
-set nu
-    
-" paste
-set pastetoggle=<F9>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugin stuffs
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Search for selected text, forwards or backwards.
-vnoremap <silent> * :<C-U>
-\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-\gvy/<C-R><C-R>=substitute(
-\escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-\gV:call setreg('"', old_reg, old_regtype)<CR>
-vnoremap <silent> # :<C-U>
-\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-\gvy?<C-R><C-R>=substitute(
-\escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-\gV:call setreg('"', old_reg, old_regtype)<CR>
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
 
-" folding
-set fdm=indent
-set foldlevelstart=99          " default not open
+Bundle 'gmarik/vundle'
 
-" completion
-inoremap<S-tab> <C-p>
+" vim-scripts repos
+Bundle 'taglist.vim'
 
-" open last location
-if has("autocmd")
-      au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
-          \| exe "normal! g'\"" | endif
-endif
+"original repos on GitHub
+Bundle 'klen/python-mode'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+
+" taglist
+let Tlist_Ctags_Cmd="/usr/bin/ctags"
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+let Tlist_Use_Left_Window=1
+let Tlist_WinWidth=45
+
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+
+" NERDTree 
+let NERDTreeAutoCenter=1
+let NERDTreeChDirMode=2
+let g:NERDTreeMinimalUI=1
+map <F3> :NERDTreeToggle<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -41,6 +47,20 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
+
+" line no
+set nu
+
+" folding
+set fdm=indent
+set foldlevelstart=99          " default not open
+
+
+" open last location
+if has("autocmd")
+      au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+          \| exe "normal! g'\"" | endif
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -127,69 +147,28 @@ set laststatus=2
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Python stuffs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-execute pathogen#infect()
-
-le g:jetdi#auto_initialization=1
-let g:jedi#completions_command="<S-tab>"
-
 "python syntax plugin
 let python_version_2=1
 let python_highlight_all=1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim stuffs
+" => Map Key  stuffs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"ctags
-let Tlist_Ctags_Cmd="/usr/bin/ctags"
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-let Tlist_Use_Left_Window=1
-let Tlist_WinWidth=45
 
-map <F12> :call Do_CsTag()<CR>
-nmap <C-@>s :cs find s <C-R>=expand("<cword>")<CR><CR>:copen<CR>
-nmap <C-@>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <C-@>c :cs find c <C-R>=expand("<cword>")<CR><CR>:copen<CR>
-nmap <C-@>t :cs find t <C-R>=expand("<cword>")<CR><CR>:copen<CR>
-nmap <C-@>e :cs find e <C-R>=expand("<cword>")<CR><CR>:copen<CR>
-nmap <C-@>f :cs find f <C-R>=expand("<cfile>")<CR><CR>:copen<CR>
-nmap <C-@>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>:copen<CR>
-nmap <C-@>d :cs find d <C-R>=expand("<cword>")<CR><CR>:copen<CR>
-function Do_CsTag()
-    let dir = getcwd()
-    if filereadable("tags")
-        let tagsdeleted=delete("./"."tags")
-        if(tagsdeleted!=0)
-            echohl WarningMsg | echo "Fail to do tags! I cannot delete the tags" | echohl None
-            return
-        endif
-    endif
-    if has("cscope")
-        silent! execute "cs kill -1"
-    endif
-    if filereadable("cscope.files")
-        let csfilesdeleted=delete("./"."cscope.files")
-        if(csfilesdeleted!=0)
-            echohl WarningMsg | echo "Fail to do cscope! I cannot delete the cscope.files" | echohl None
-            return
-        endif
-    endif
-    if filereadable("cscope.out")
-        let csoutdeleted=delete("./"."cscope.out")
-        if(csoutdeleted!=0)
-            echohl WarningMsg | echo "Fail to do cscope! I cannot delete the cscope.out" | echohl None
-           return
-        endif
-    endif
-    if(executable('ctags'))
-        silent! execute "!ctags -R --c-types=+p --fields=+S *"
-        silent! execute "!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q ."
-    endif
-    if(executable('cscope') && has("cscope") )
-        silent! execute "!ls *.c *.cpp *.h *.java *.cs >> cscope.files 2>/dev/null"
-        silent! execute "!cscope -b"
-        if filereadable("cscope.out")
-            silent! execute "cs add cscope.out"
-        endif
-    endif
-endfunction
+" Search for selected text, forwards or backwards.
+vnoremap <silent> * :<C-U>
+\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+\gvy/<C-R><C-R>=substitute(
+\escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+\gV:call setreg('"', old_reg, old_regtype)<CR>
+vnoremap <silent> # :<C-U>
+\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
+\gvy?<C-R><C-R>=substitute(
+\escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
+\gV:call setreg('"', old_reg, old_regtype)<CR>
+
+" completion
+inoremap<S-tab> <C-p>
+
+" ycm goto
+nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
