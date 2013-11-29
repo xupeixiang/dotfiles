@@ -12,13 +12,14 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 Bundle 'taglist.vim'
+Bundle 'python.vim'
 
 "original repos on GitHub
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 
-" taglist
+" Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
 let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
@@ -27,12 +28,21 @@ let Tlist_WinWidth=45
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_min_num_identifier_candidate_chars=4
 
 " NERDTree 
 let NERDTreeAutoCenter=1
 let NERDTreeChDirMode=2
 let g:NERDTreeMinimalUI=1
 map <F3> :NERDTreeToggle<CR>
+
+" Syntastic
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='⚠'
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_python_checkers=['flake8']
+let g:syntastic_python_flake8_args='--select=F,C9 --max-complexity=10'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
