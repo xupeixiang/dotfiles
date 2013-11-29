@@ -14,7 +14,6 @@ Bundle 'gmarik/vundle'
 Bundle 'taglist.vim'
 
 "original repos on GitHub
-Bundle 'klen/python-mode'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
