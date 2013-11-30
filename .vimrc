@@ -18,6 +18,8 @@ Bundle 'taglist.vim'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 Bundle 'hdima/python-syntax'
+Bundle 'davidhalter/jedi-vim'
+Bundle 'ervandew/supertab'
 
 " Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
@@ -176,9 +178,3 @@ vnoremap <silent> # :<C-U>
 \gvy?<C-R><C-R>=substitute(
 \escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
 \gV:call setreg('"', old_reg, old_regtype)<CR>
-
-" completion
-inoremap<S-tab> <C-p>
-
-" ycm goto
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
