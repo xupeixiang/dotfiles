@@ -12,12 +12,12 @@ Bundle 'gmarik/vundle'
 
 " vim-scripts repos
 Bundle 'taglist.vim'
-Bundle 'python.vim'
 
 " original repos on GitHub
 "Bundle 'Valloric/YouCompleteMe'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
+Bundle 'hdima/python-syntax'
 
 " Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
