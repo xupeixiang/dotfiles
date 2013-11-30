@@ -20,6 +20,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'hdima/python-syntax'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
+Bundle 'bling/vim-airline'
 
 " Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
@@ -33,7 +34,7 @@ let Tlist_WinWidth=45
 "let g:ycm_autoclose_preview_window_after_completion=1
 "let g:ycm_min_num_identifier_candidate_chars=4
 
-" NERDTree 
+" NERDTree
 let NERDTreeAutoCenter=1
 let NERDTreeChDirMode=2
 let g:NERDTreeMinimalUI=1
@@ -47,6 +48,8 @@ let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args='--select=F,C9 --max-complexity=10'
 
+" Airline
+let g:airline_theme="powerlineish"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -81,7 +84,7 @@ endif
 " Ignore case when searching
 set ignorecase
 
-" When searching try to be smart about cases 
+" When searching try to be smart about cases
 set smartcase
 
 " Highlight search results
@@ -150,10 +153,6 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set statusline=%F%m%r%h%w\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
 set laststatus=2
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
