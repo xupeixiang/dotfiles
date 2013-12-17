@@ -72,7 +72,7 @@ set nu
 
 " folding
 set fdm=indent
-set foldlevelstart=99          " default not open
+set foldlevelstart=1
 
 
 " open last location
