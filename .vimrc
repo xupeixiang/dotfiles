@@ -51,7 +51,7 @@ let g:syntastic_python_flake8_args='--select=F,C9 --max-complexity=10'
 " Airline
 let g:airline_theme="powerlineish"
 let g:airline_section_b = "%{getcwd()}"
-let g:airline_section_warning = "%{strftime('%c')}"
+let g:airline_section_warning = ""
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
