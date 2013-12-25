@@ -46,7 +46,6 @@ let g:syntastic_error_symbol='✗'
 let g:syntastic_warning_symbol='⚠'
 let g:syntastic_always_populate_loc_list=1
 let g:syntastic_python_checkers=['pyflakes']
-let g:syntastic_python_flake8_args='--select=F,C9 --max-complexity=10'
 
 " Airline
 let g:airline_theme="powerlineish"
