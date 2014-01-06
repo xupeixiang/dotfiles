@@ -35,10 +35,12 @@ let Tlist_WinWidth=45
 "let g:ycm_min_num_identifier_candidate_chars=4
 
 " NERDTree
-let NERDTreeAutoCenter=1
 let NERDTreeChDirMode=2
-let g:NERDTreeMinimalUI=1
+let NERDTreeMinimalUI=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeShowHidden=1
 map <F3> :NERDTreeToggle<CR>
+map <F4> :NERDTreeClose<CR>
 
 " Syntastic
 let g:syntastic_check_on_open=1
