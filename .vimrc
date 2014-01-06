@@ -55,6 +55,7 @@ let g:airline_section_b = "%{getcwd()}"
 let g:airline_section_warning = ""
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
