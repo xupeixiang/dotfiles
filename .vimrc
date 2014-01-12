@@ -21,6 +21,7 @@ Bundle 'hdima/python-syntax'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'bling/vim-airline'
+Bundle 'fholgado/minibufexpl.vim'
 
 " Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
