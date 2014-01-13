@@ -21,7 +21,6 @@ Bundle 'hdima/python-syntax'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'bling/vim-airline'
-Bundle 'fholgado/minibufexpl.vim'
 
 " Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
@@ -190,3 +189,7 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
 map <c-l> <c-w>l
+
+" Tabs
+map <F5> :tabprevious<CR>
+map <F6> :tabnext<CR>
