@@ -191,5 +191,5 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 
 " Tabs
-map <F5> :tabprevious<CR>
-map <F6> :tabnext<CR>
+map <tab> gt
+map <c-a> :tabnew .<cr>
