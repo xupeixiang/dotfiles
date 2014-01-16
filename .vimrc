@@ -191,8 +191,8 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 
 " Tabs
-map <F5> :tabprevious<cr>
-map <F6> :tabnext<cr>
+map <tab> gt
+map <c-a> :tabnew .<cr>
 
 " Taglist
 map <F2> :TlistToggle<cr> 
