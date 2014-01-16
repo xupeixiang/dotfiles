@@ -30,3 +30,5 @@ highlight DiffDelete term=reverse cterm=bold ctermbg=lightred ctermfg=16
 
 highlight PmenuSel ctermfg=16 ctermbg=156
 
+hi Title guifg=#f6f3e8     guibg=NONE        gui=BOLD   ctermfg=yellow  ctermbg=NONE    cterm=NONE
+hi MyTagListFileName  guifg=cyan     guibg=NONE        gui=BOLD   ctermfg=cyan  ctermbg=NONE    cterm=NONE

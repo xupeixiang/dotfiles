@@ -39,8 +39,8 @@ let NERDTreeChDirMode=2
 let NERDTreeMinimalUI=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
-map <F3> :NERDTreeToggle<CR>
-map <F4> :NERDTreeClose<CR>
+map <F3> :NERDTreeToggle<cr>
+map <F4> :NERDTreeClose<cr>
 
 " Syntastic
 let g:syntastic_check_on_open=1
@@ -174,15 +174,15 @@ let python_highlight_all=1
 
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
-\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-\gvy/<C-R><C-R>=substitute(
-\escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-\gV:call setreg('"', old_reg, old_regtype)<CR>
+\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<cr>
+\gvy/<c-r><c-r>=substitute(
+\escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
+\gV:call setreg('"', old_reg, old_regtype)<cr>
 vnoremap <silent> # :<C-U>
-\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<CR>
-\gvy?<C-R><C-R>=substitute(
-\escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<CR><CR>
-\gV:call setreg('"', old_reg, old_regtype)<CR>
+\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<cr>
+\gvy?<c-r><c-r>=substitute(
+\escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
+\gV:call setreg('"', old_reg, old_regtype)<cr>
 
 " Windows split movement
 map <c-j> <c-w>j
@@ -191,5 +191,9 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 
 " Tabs
-map <F5> :tabprevious<CR>
-map <F6> :tabnext<CR>
+map <F5> :tabprevious<cr>
+map <F6> :tabnext<cr>
+
+" Taglist
+map <F2> :TlistToggle<cr> 
+map <F12> :! ctags -R --languages=c++,python --langmap=c++:+.inl -h +.inl --c++-kinds=+px --fields=+aiKSz --extra=+q <cr><cr>
