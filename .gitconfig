@@ -2,6 +2,7 @@
     name = Peixiang xu
     email = peixiangxu@gmail.com
 [alias]
+    cm = commit
     ca = commit -a
     co = checkout
     st = status -uno
