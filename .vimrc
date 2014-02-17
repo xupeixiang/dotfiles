@@ -39,8 +39,6 @@ let NERDTreeChDirMode=2
 let NERDTreeMinimalUI=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
-map <F3> :NERDTreeToggle<cr>
-map <F4> :NERDTreeClose<cr>
 
 " Syntastic
 let g:syntastic_check_on_open=1
@@ -197,3 +195,6 @@ map <c-a> :tabnew .<cr>
 " Taglist
 map <F2> :TlistToggle<cr> 
 map <F12> :! ctags -R --languages=c++,python --langmap=c++:+.inl -h +.inl --c++-kinds=+px --fields=+aiKSz --extra=+q <cr><cr>
+
+" NerdTree
+map <F3> :NERDTreeToggle<cr>
