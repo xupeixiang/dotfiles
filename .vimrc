@@ -28,6 +28,8 @@ let Tlist_Show_One_File=1
 let Tlist_Exit_OnlyWindow=1
 let Tlist_Use_Left_Window=1
 let Tlist_WinWidth=45
+let tlist_cpp_settings = 'c++;n:namespace;v:variable;m:member;d:macro;t:typedef;' .
+                             \ 'c:class;g:enum;s:struct;u:union;f:function'
 
 " YouCompleteMe
 "let g:ycm_global_ycm_extra_conf="~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
