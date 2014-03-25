@@ -19,6 +19,9 @@ alias ss='svn st'
 alias ssq='svn st -q'
 alias sl='svn log'
 alias sll='svn log -l 5'
+alias nyc='ssh pxu@nycdev01'
+alias 201='ssh pxu@192.168.0.201'
+alias stg='ssh pxu@stgdev01'
 
 # customed cd
 export MARKPATH=$HOME/.marks
