@@ -22,6 +22,8 @@ alias sll='svn log -l 5'
 alias nyc='ssh pxu@nycdev01'
 alias 201='ssh pxu@192.168.0.201'
 alias stg='ssh pxu@stgdev01'
+alias tx='tmux'
+alias txa='tmux a'
 
 # customed cd
 export MARKPATH=$HOME/.marks
