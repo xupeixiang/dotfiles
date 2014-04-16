@@ -8,11 +8,12 @@ if [ $OSTYPE = 'linux-gnu' ];then
 fi
 
 # \h:\W \u\$
-export PS1="\[\e[32;1m\]\u@\h \[\e[0;30;1m\]· \[\e[36;1m\]\w \[\e[0;30;1m\]· \[\e[33;1m\]\t \[\e[0;30;1m\]· \n\
+export PS1="\[\e[0;30;1m\]· \[\e[32;1m\]Eagle \[\e[0;30;1m\]At \[\e[0;31;1m\]\h \[\e[0;30;1m\]·  \[\e[36;1m\]\w \[\e[0;30;1m\]·  \[\e[33;1m\]\t \[\e[0;30;1m\]·  \n\
 \[\e[37;1m\]\$ \[\e[0m\] "
 
 # alias
 alias ll='ls -l -a'
+alias vi='vim'
 alias grep='grep --color=always'
 alias j='jump'
 alias ss='svn st'
