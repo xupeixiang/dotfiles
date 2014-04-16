@@ -21,6 +21,8 @@ Bundle 'hdima/python-syntax'
 Bundle 'davidhalter/jedi-vim'
 Bundle 'ervandew/supertab'
 Bundle 'bling/vim-airline'
+Bundle 'tpope/vim-surround'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 " Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
@@ -55,6 +57,12 @@ let g:airline_section_b = "%{getcwd()}"
 let g:airline_section_warning = ""
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
+
+"Indent
+"let g:indent_guides_enable_on_vim_startup = 1           <Leader>ig 
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd guibg=grey ctermbg=grey
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=darkgrey ctermbg=darkgrey
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
