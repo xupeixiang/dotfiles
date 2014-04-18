@@ -179,7 +179,6 @@ let python_highlight_all=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Map Key  stuffs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Search for selected text, forwards or backwards.
 vnoremap <silent> * :<C-U>
 \let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<cr>
@@ -200,7 +199,6 @@ map <c-l> <c-w>l
 
 " Tabs
 map <tab> gt
-map <c-a> :tabnew .<cr>
 
 " Taglist
 map <F2> :TlistToggle<cr> 
