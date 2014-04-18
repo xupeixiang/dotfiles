@@ -1,10 +1,11 @@
 # ls color for mac
 export CLICOLOR=1
+export LS_COLORS='no=00:fi=00:di=01;36:ln=01;35:pi=40;33:so=01;35:bd=40;33;01:cd=40;33;01:or=01;05;37;41:mi=01;05;37;41:ex=01;32:*.sh=01;31:*.tar=01;31:*.tgz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.gz=01;31:*.bz2=01;31:*.bz=01;31:*.tz=01;31:*.py=01;32:*.rb=01;200:*.cpp=01;32:*.h=01;200:*.conf=01;200:*.log=01;200:*.sql=01;32'
 export LSCOLORS=GxFxCxDxCxegedabagaced
 
 # ls color for ubuntu both
 if [ $OSTYPE = 'linux-gnu' ];then
-    alias ls='ls --color=auto'
+    alias ls='ls -F --color=always'
 fi
 
 # \h:\W \u\$
@@ -12,7 +13,7 @@ export PS1="\[\e[0;30;1m\]· \[\e[32;1m\]Eagle \[\e[0;30;1m\]At \[\e[0;31;1m\]\h
 \[\e[37;1m\]\$ \[\e[0m\]"
 
 # alias
-alias ll='ls -l -a'
+alias ll='ls -l -A -h -t'
 alias vi='vim'
 alias grep='grep --color=always'
 alias j='jump'
