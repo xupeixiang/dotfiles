@@ -81,9 +81,8 @@ set autoread
 set nu
 
 " folding
-set fdm=indent
-set foldlevelstart=1
-
+"set fdm=indent
+"set foldlevelstart=1
 
 " open last location
 if has("autocmd")
