@@ -5,7 +5,7 @@ export LSCOLORS=GxFxCxDxCxegedabagaced
 
 # ls color for ubuntu both
 if [ $OSTYPE = 'linux-gnu' ];then
-    alias ls='ls -F --color=always'
+    alias ls='ls --color=always'
 fi
 
 # \h:\W \u\$
@@ -13,7 +13,7 @@ export PS1="\[\e[0;30;1m\]· \[\e[32;1m\]Eagle \[\e[0;30;1m\]At \[\e[0;31;1m\]\h
 \[\e[37;1m\]\$ \[\e[0m\]"
 
 # alias
-alias ll='ls -l -A -h -t'
+alias ll='ls -AFlht'
 alias vi='vim'
 alias grep='grep --color=always'
 alias j='jump'
