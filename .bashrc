@@ -23,7 +23,7 @@ alias stg='ssh pxu@stgdev01'
 alias cash1='ssh eng@cashbox1.dev.fwmrm.net'
 alias cash2='ssh eng@cashbox2.dev.fwmrm.net'
 alias tx='tmux'
-alias txa='tmux a'
+alias txa='tmux attach -d'
 
 # customed cd
 export MARKPATH=$HOME/.marks
