@@ -23,6 +23,7 @@ Bundle 'ervandew/supertab'
 Bundle 'bling/vim-airline'
 Bundle 'tpope/vim-surround'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'tpope/vim-commentary'
 
 " Taglist
 let Tlist_Ctags_Cmd="/usr/bin/ctags"
