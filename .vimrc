@@ -155,7 +155,7 @@ autocmd BufNewFile *.py 0r ~/.vim/template/python.py
 " Use spaces instead of tabs
 set expandtab
 
-" Be smart when using tabs ;)
+" Be smart when using tabs
 set smarttab
 
 " 1 tab == 4 spaces
