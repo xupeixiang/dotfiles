@@ -119,6 +119,9 @@ set bs=2
 " Show command when you type them
 set sc
 
+" Use relative number
+set relativenumber
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
