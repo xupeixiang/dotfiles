@@ -179,17 +179,8 @@ let python_highlight_all=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Map Key  stuffs
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Search for selected text, forwards or backwards.
-vnoremap <silent> * :<C-U>
-\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<cr>
-\gvy/<c-r><c-r>=substitute(
-\escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
-\gV:call setreg('"', old_reg, old_regtype)<cr>
-vnoremap <silent> # :<C-U>
-\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<cr>
-\gvy?<c-r><c-r>=substitute(
-\escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
-\gV:call setreg('"', old_reg, old_regtype)<cr>
+" Common
+map Y y$
 
 " Windows split movement
 map <c-j> <c-w>j
@@ -206,3 +197,15 @@ map <F12> :! ctags -R --languages=c++,python --langmap=c++:+.inl -h +.inl --c++-
 
 " NerdTree
 map <F3> :NERDTreeToggle<cr>
+
+" Search for selected text, forwards or backwards.
+vnoremap <silent> * :<C-U>
+\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<cr>
+\gvy/<c-r><c-r>=substitute(
+\escape(@", '/\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
+\gV:call setreg('"', old_reg, old_regtype)<cr>
+vnoremap <silent> # :<C-U>
+\let old_reg=getreg('"')<Bar>let old_regtype=getregtype('"')<cr>
+\gvy?<c-r><c-r>=substitute(
+\escape(@", '?\.*$^~['), '\_s\+', '\\_s\\+', 'g')<cr><cr>
+\gV:call setreg('"', old_reg, old_regtype)<cr>
