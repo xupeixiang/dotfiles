@@ -184,6 +184,8 @@ let python_highlight_all=1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Common
 map Y y$
+map j gj
+map k gk
 
 " Windows split movement
 map <c-j> <c-w>j
