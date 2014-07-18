@@ -22,6 +22,7 @@ alias 201='ssh pxu@192.168.0.201'
 alias stg='ssh pxu@stgdev01'
 alias cash1='ssh eng@cashbox1.dev.fwmrm.net'
 alias cash2='ssh eng@cashbox2.dev.fwmrm.net'
+alias cash6='ssh eng@cashbox6.dev.fwmrm.net'
 alias tx='tmux'
 alias txa='tmux attach -d'
 
