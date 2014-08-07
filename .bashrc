@@ -12,6 +12,8 @@ fi
 export PS1="\[\e[0;30;1m\]· \[\e[32;1m\]Eagle \[\e[0;30;1m\]At \[\e[0;31;1m\]\h\[\e[0;30;1m\]· \[\e[36;1m\]\w\[\e[0;30;1m\]· \[\e[33;1m\]\t\[\e[0;30;1m\] ™ \n\
 \[\e[37;1m\]\$ \[\e[0m\]"
 
+export GREP_COLOR="1;32"
+
 # alias
 alias ll='ls -AFlh'
 alias vi='vim'
