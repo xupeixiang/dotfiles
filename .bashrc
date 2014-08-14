@@ -29,6 +29,9 @@ alias cash6='ssh eng@cashbox6.dev.fwmrm.net'
 alias tx='tmux'
 alias txa='tmux attach -d'
 
+psg () { ps | egrep -i $* | egrep -v egrep; }
+llt () { ll -t $* | head; }
+
 # customed cd
 export MARKPATH=$HOME/.marks
 function jump { 
