@@ -28,6 +28,7 @@ alias cash2='ssh eng@cashbox2.dev.fwmrm.net'
 alias cash6='ssh eng@cashbox6.dev.fwmrm.net'
 alias tx='tmux'
 alias txa='tmux attach -d'
+alias dk='docker'
 
 psg () { ps | egrep -i $* | egrep -v egrep; }
 llt () { ll -t $* | head; }
