@@ -123,14 +123,8 @@ set relativenumber
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Enable syntax highlighting
-
-" Some Linux distributions set filetype in /etc/vimrc.
-" Clear filetype flags before changing runtimepath to force Vim to reload them.
-if exists("g:did_load_filetypes")
-    filetype off
-    filetype plugin indent off
-endif
-set runtimepath+=$GOROOT/misc/vim " replace $GOROOT with the
+" Go support
+set rtp+=$GOROOT/misc/vim  
 filetype plugin indent on
 syntax on
 
