@@ -3,6 +3,8 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Vundle
+" git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
